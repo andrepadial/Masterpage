@@ -1,0 +1,114 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="Teste.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head runat="server">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%: Page.Title %> - Duetto</title>
+
+        <asp:PlaceHolder runat="server">
+            <%: Scripts.Render("~/bundles/modernizr") %>
+        </asp:PlaceHolder>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant" />
+        <link href="Content/mcmenu.css" rel="stylesheet" />
+        <script src="Scripts/mcmenu.js" type="text/javascript"></script>
+
+        <style>
+            body {
+                margin:0;
+                background:transparent;
+            }
+            #menuDuetto { text-align:center; padding:30px 8px; }
+        </style>
+
+    </head>
+    <body>
+        <form runat="server">
+            <div id="menuDuetto">
+                <div class="menu-icon-wrapper">
+	                <div class="menu-icon" data-menu="mcmenu">
+		                <div class="three-line">
+			                <span></span>
+			                <span></span>
+			                <span></span>
+		                </div>
+	                </div>
+                </div>
+                <div id="mcmenu">
+                    <ul>                        
+                        <li>
+                            <span>Creative <i class="arrow"></i></span>
+                            <ul class="dropdown">
+				                <li><a href="#teste">Teste</a></li>
+                                <li><a href="#">Curabitur</a></li>
+                                <li>
+                                    <span>Suspendisse vel <i class="arrow"></i></span>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Etiam vestibulum</a></li>
+                                        <li><a href="#">Integer efficitur</a></li>
+                                        <li><a href="#">Finibus nibh</a></li>
+                                    </ul>
+                                </li>
+                                <li>                                    
+                                    <ul class="dropdown">
+                                        <li><a href="#">Nam elementum</a></li>
+                                        <li><a href="#">Magna pharetra</a></li>
+                                        <li><a href="#">Pulvinar mi eget</a></li>
+                                        <li><a href="#">Tincidunt orci</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Studio</a></li>
+                        <li class="full-width">
+                            <span>Press <i class="arrow"></i></span>
+                            <div class="dropdown">
+                                <div class="clm">
+                                    <h3>Integer</h3>
+                                    <a href="#">Lacus iaculis</a>
+                                    <a href="#">Eu tortor</a>
+                                    <a href="#">Luctus varius</a>
+                                </div>
+                                <div class="clm">
+                                    <h3>Efficitur Viverra</h3>
+                                    <a href="#">Praesent</a>
+                                    <h3>At Eros</h3>
+                                    <a href="#">Pellentesque </a>
+                                    <a href="#">Dignissim pulvinar</a>
+                                </div>                                
+                            </div>
+                        </li>
+                        <li><a href="#">Blog</a></li>
+                        <li>
+                            <span>Contact <i class="arrow"></i></span>
+                            <ul class="dropdown right0">
+                                <li><a href="#">Nam elementum</a></li>
+                                <li><a href="#">Magna pharetra</a></li>
+                                <li><a href="#">Pulvinar mi eget</a></li>
+                                <li><a href="#">Tincidunt orci</a></li>
+                                <li>                                    
+                                    <ul class="dropdown right0">
+                                        <li><a href="#">Nam elementum</a></li>
+                                        <li><a href="#">Magna pharetra</a></li>
+                                        <li><a href="#">Pulvinar mi eget</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> - Duetto</p>
+                </footer>
+            </div>
+        </form>
+    </body>
+</html>
